@@ -1,0 +1,128 @@
+.mainContainer {
+
+    width: 100%;
+    left: 0;
+    bottom: 0;
+   
+}
+
+.mainContainer > h1 {
+
+    margin-top: 40px;
+
+}
+
+h1 {
+
+    display: inline;
+    bottom: 50%;
+
+}
+
+.columnContent {
+
+    width: 25%;
+    height: auto;
+
+}
+
+.separatorLine {
+
+    width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+
+}
+
+.rowFlex {
+
+    flex-wrap: wrap;
+
+}
+
+.columnContent img {
+
+    width: 80%;
+
+}
+
+.columnContent p {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+
+}
+
+button {
+
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 10px;
+    font-size: 0.5em;
+    height: auto;
+    padding: 10px;
+    color: #202020;
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .columnContent {
+
+        width: 50%;
+
+    }
+
+    button {
+
+        width: 25%;
+
+    }
+    
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .mainContainer h1 {
+
+        font-size: 1.8em;
+
+    }
+
+    .rowFlex {
+
+        flex-direction: column;
+        width: 75%;
+
+    }
+
+    button {
+
+        width: 30%;
+        font-size: 0.8em;
+
+    }
+
+    .columnContent {
+
+        margin: 20px;
+        width: 100%;
+
+    }
+
+    .columnContent h2 {
+
+        font-size: 1.2em;
+
+    }
+
+    .columnContent p {
+
+        text-align: center;
+        font-size: 1.3em;
+
+    }
+
+}

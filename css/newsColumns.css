@@ -1,0 +1,60 @@
+.mainContainer {
+
+    flex-direction: row;
+    padding: 0;
+
+}
+
+.column {
+
+    width: 45%;
+
+}
+
+.columnContent {
+
+    width: 100%;
+
+}
+
+.columnContent > img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+.separator {
+
+    width: 30%;
+    height: auto;
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .mainContainer {
+
+        width: 100%;
+        left: 0;
+
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .mainContainer {
+
+        padding: 5%;
+
+    }
+
+    .column {
+
+        width: 100%;
+
+    }
+
+
+}

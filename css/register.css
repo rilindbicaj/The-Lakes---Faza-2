@@ -1,0 +1,94 @@
+.register ul li a:last-child {
+
+    font-size: 60%;
+
+}
+
+.login .register {
+
+    font-size: 100%;
+    position: relative;
+    top: 2.5%;
+
+}
+
+input {
+
+    width: 100%;
+    transition: box-shadow 1s ease;
+
+}
+
+.login ul li:first-child {
+
+    width: auto;
+
+}
+
+.login ul li:nth-child(9) { /* override login.css style */
+
+    font-size: 90%;
+
+}
+
+.login ul li:nth-child(7) {
+
+    font-size: 90%;
+    width: 100%;
+
+}
+
+.login ul li:nth-child(8) {
+
+    position: relative;    
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .login {
+
+        width: 70%;
+        font-size: 100%;
+
+    }
+
+    .register ul li a:last-child {
+
+        font-size: 50%;
+    
+    }
+
+    .login ul li {
+
+        width: 60%;
+
+  }
+
+
+}
+
+@media (max-width: 767px) {
+
+    .login {
+
+        width: 100%;
+        left: 0;
+        font-size: 100%;
+
+    }
+
+    .login ul {
+
+        width: 80%;
+        left: 10%;
+
+    }
+
+    .login ul li {
+
+        width: 40%;
+
+  }
+
+}

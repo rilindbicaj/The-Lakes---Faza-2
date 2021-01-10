@@ -1,0 +1,16 @@
+> Create pages [DONE]
+> Create store.php
+> Fix god awful CSS code repetition (news-artists-videos) [DONE]
+> Fix register/login JS so it doesnt suck as much
+> Create dropdowns for mobile header
+> Fix mobile header group menu so it doesnt look like shit
+> Add news pages (and try to find the articles we copied)
+> Reduce all unnecessary !important s [DONE]
+> Fix header being a bitch everywhere (not 60px but 10%) [DONE]
+> Remodel news page so it's not 2 columns of 3 but 3 rows of 2 (so they actually align)
+> Add more artists
+> Separate releases.css from news.css (no time rn) also remove inline style [DONE]
+> Add forgot password function [CANCELED]
+> Create icons for titles (pure white)
+> Fix slideshow responsiveness
+> Remake footer so it doesnt float above (modernise it)
