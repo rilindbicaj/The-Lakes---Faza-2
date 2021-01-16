@@ -5,13 +5,35 @@
     <title>the lakes</title>
     <link rel="icon" href="media/Logo1000px.png">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/mainStyleBackup.css">
+    <link rel="stylesheet" href="css/mainstyle.php">
 
 </head>
 
 <body>
 
-    <?php include 'components/header.php' ?>
+    <?php
+    
+    include 'components/header.php';
+    
+    function indexContent($content) {
+
+        if($content === 'profile') {
+
+            if (isset($_SESSION['username'])) echo 'media/userprofiles/'.$_SESSION['username'].'.jpg';
+            else echo 'media/unknownprofile.gif';
+
+        }
+
+        else if ($content === 'user') {
+
+            if (isset($_SESSION['username'])) echo $_SESSION['username'];
+            else echo 'user';
+
+        }
+
+    }
+    
+    ?>
 
         <div class="loginLogo">
 
@@ -29,8 +51,8 @@
 
                 <ul>
 
-                    <li><img src="media/unknownprofile.gif" id="profilePic" alt=""></li>
-                    <li>welcome, user</li>
+                    <li><img src="<?php indexContent('profile')?>" id="profilePic" alt=""></li>
+                    <li class="usernameCenter">welcome, <?php indexContent('user') ?></li>
                     <li><a href="cart.php"><img src="media/CartLogo.png" alt=""></a></li>
                     <li><a href="cart.php">your cart</a></li>
                     <li><a href="bookmarks.php"><img src="media/BookmarkLogo.png" alt=""></a></li>

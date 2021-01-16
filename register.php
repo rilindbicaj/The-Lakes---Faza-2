@@ -7,7 +7,7 @@
     <title>register</title>
     <link rel="icon" href="media/SettingsLogo.png">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/mainStyleBackup.css">
+    <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/login.css"> <!-- its the exact same stuff just different text -->
     <link rel="stylesheet" href="css/register.css">
 

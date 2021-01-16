@@ -4,8 +4,8 @@
 
     <title>latest videos</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <link rel="stylesheet" href="css/mainStyleBackup.css">
-    <link rel="stylesheet" href="css/onecolumn.css">
+    <link rel="stylesheet" href="css/mainstyle.php">
+    <link rel="stylesheet" href="css/onecolumn.php">
     <link rel="icon" href="media/icovideo.png">
 
 </head>

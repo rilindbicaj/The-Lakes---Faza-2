@@ -5,8 +5,8 @@
     <title>latest releases</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link rel="icon" href="media/SpotifyLogo.png">
-    <link rel="stylesheet" href="css/mainStyleBackup.css">
-    <link rel="stylesheet" href="css/onecolumn.css">
+    <link rel="stylesheet" href="css/mainstyle.php">
+    <link rel="stylesheet" href="css/onecolumn.php">
 
 </head>
 

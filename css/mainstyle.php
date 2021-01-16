@@ -1,3 +1,17 @@
+<?php 
+
+//Dynamic stylesheet used for light and dark themes
+//Uses data from database initially then gets them from the session so it's easier to access
+
+session_start();
+
+Header ("Content-type: text/css; charset=utf-8");
+
+require '../phpscripts/connect.php';
+require '../phpscripts/functions.php';
+
+?>
+
 @font-face {
 
 font-family: Didot;
@@ -7,17 +21,17 @@ src: url(../media/Didot\ Regular.ttf);
 
 @keyframes growingGlowingWhite {
 
-    0% {color: #989494;}
+    0% {<?php theme($theme, 'color')?>}
     50% {color: white; font-size: 110%;}
-    100% {color: #989494; font-size: 107%;}
+    100% {<?php theme($theme, 'color')?> font-size: 107%;}
 
 }
 
 @keyframes glowingWhite {
 
-    0% {color: #989494;}
+    0% {<?php theme($theme, 'color')?>}
     50% {color: white;}
-    100% {color: #989494;}
+    100% {<?php theme($theme, 'color')?>}
 
 }
 
@@ -60,12 +74,12 @@ src: url(../media/Didot\ Regular.ttf);
 
     margin: 0;
     padding: 0;
-    color: #989494;
+    <?php theme($theme, 'color')?>
     font-family: Didot;
     font-size: 107%;
     font-weight:bolder;
     z-index: 0;
-    
+
 }
 
 .opacityFade {
@@ -83,6 +97,7 @@ src: url(../media/Didot\ Regular.ttf);
     z-index: -2;
     height: 100vh;
     width: 100vw;
+    <?php theme($theme, 'icons') //invert and make it black?> 
 
 }
 
@@ -134,7 +149,7 @@ main {
 
 footer {
 
-    background-color: rgba(32, 32, 32, 0.6);
+    <?php theme($theme, 'footer')?>
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -149,7 +164,7 @@ footer {
 
 .paperBackground {
 
-    background-image: url(../media/transpaper.png);
+    <?php theme($theme, 'background')?>
     background-repeat: repeat;
 
 }
@@ -202,6 +217,7 @@ header {
     height: 3vh;
     width: auto;
     transition: transform 0.2s linear;
+    <?php theme($theme, 'icons')?>
 
 }
 
@@ -256,6 +272,12 @@ header {
     order: 2;
     z-index: 2;
     animation: fade 12s;
+
+}
+
+.usernameCenter {
+
+text-align: center;
 
 }
 
@@ -388,6 +410,8 @@ footer p {
     height: 5vh;
     width: auto;
     transition: transform 0.2s linear;
+    <?php theme($theme, 'icons')?>
+
 
 }
 
@@ -399,12 +423,14 @@ footer p {
 
 #profilePic {
 
-    width: 50%;
+    position: relative;
+    width: 30%;
     height: auto;
-    margin-left: 20%;
+    left: 35%;
     border: 5px solid #989494;
     border-radius: 10px;
     border-style:outset;
+    filter:none;
 
 }
 
@@ -436,14 +462,14 @@ footer p {
 
 .bordersall {
 
-    border:solid 5px #989494;
+    <?php theme($theme, 'borders') ?>
     border-radius: 255px 15px 225px 15px/15px 225px 15px;
 
 }
 
 .bordersnobottom {
 
-    border:solid 5px #989494;
+    <?php theme($theme, 'borders') ?>
     border-bottom: none;
     border-radius: 255px 15px 225px 15px/15px 225px 15px;
 
@@ -451,7 +477,7 @@ footer p {
 
 .bordersnotop {
 
-    border:solid 5px #989494;
+    <?php theme($theme, 'borders') ?>
     border-top: none;
     border-radius: 255px 15px 225px 15px/15px 225px 15px;
 

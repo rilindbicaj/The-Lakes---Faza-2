@@ -1,4 +1,4 @@
-var passRegx = /^[A-Za-z]\w{7,14}$/;
+var passRegx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z.\d]{8,}$/; //min 8, min 1 uppercase, lowercase, number, . optional
 
 function glow(bool, target) {
     

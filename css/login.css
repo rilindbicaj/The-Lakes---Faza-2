@@ -108,6 +108,13 @@ input:focus {
 
 }
 
+.login ul li:last-child {
+
+    font-size: 50%;
+    color: red;
+
+}
+
 .button {
 
    width: auto;

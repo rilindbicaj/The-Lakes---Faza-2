@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+Header ("Content-type: text/css; charset=utf-8");
+
+require '../phpscripts/functions.php';
+
+?>
+
 /* GENERAL */
 
 main {
@@ -124,7 +134,7 @@ main {
 
 .columnContent:hover {
 
-    filter: drop-shadow(10px 10px 3px rgba(179, 179, 179, 0.432));
+    <?php theme($theme, 'dropshadow')?>
 
 }
 
@@ -147,6 +157,7 @@ main {
     width: 30%;
     height: auto;
     margin: 30px;
+    <?php theme($theme, 'icons')?>
 
 }
 
@@ -198,7 +209,7 @@ iframe {
 
 .columnContentRow:hover {
 
-    filter: drop-shadow(10px 10px 3px rgba(179, 179, 179, 0.432));
+    <?php theme($theme, 'dropshadow')?>
 
 }
 

@@ -5,8 +5,8 @@
     <title>latest news</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link rel="icon" href="media/BookmarkLogo.png">
-    <link rel="stylesheet" href="css/mainStyleBackup.css">
-    <link rel="stylesheet" href="css/onecolumn.css">
+    <link rel="stylesheet" href="css/mainstyle.php">
+    <link rel="stylesheet" href="css/onecolumn.php">
     <link rel="stylesheet" href="css/newsColumns.css">
 
 </head>
@@ -76,7 +76,7 @@
                         <div class="columnContent">
 
                             <h3>Cyber-pop artist yeule is bridging the void between digital and IRL</h3>
-                            <img src="media/news4.jpg" alt="columnContentpic">
+                            <img class="bordersall" src="media/news4.jpg" alt="columnContentpic">
                             <p>As she releases her debut album Serotonin II, the Singapore artist talks artificial
                                 intelligence, real life avatars, and growing up online</p>
 
@@ -94,7 +94,7 @@
 
                         <h3>Sandie Shaw blasts Spotify for handing out millions to Sussexes and only small amounts to
                             musicians</h3>
-                        <img src="media/news5.jpg" alt="columnContentpic">
+                        <img class="bordersall" src="media/news5.jpg" alt="columnContentpic">
                         <p>Sixties star Sandie Shaw led an attack by British musicians on Spotify last night over its
                             lucrative podcast deal with Harry and Meghan</p>
 
@@ -109,7 +109,7 @@
                     <div class="columnContent">
 
                         <h3>Bandcamp Extends Artist-Assisting Fridays Through May 2021</h3>
-                        <img src="media/news6.jpeg" alt="columnContentpic">
+                        <img class="bordersall" src="media/news6.jpeg" alt="columnContentpic">
                         <p>In addition to the Bandcamp Friday extension, Bandcamp revealed that fans spent $40 million through the monthly promotions. In November, the platform launched a new livestream feature for artists to hosts remote shows</p>
 
                     </div>

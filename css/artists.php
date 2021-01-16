@@ -1,3 +1,5 @@
+<?php Header ("Content-type: text/css; charset=utf-8"); ?>
+
 main {
 
     height: auto;
