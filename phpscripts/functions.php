@@ -83,7 +83,8 @@ function theme($theme, $selector) {
                 break;
 
             case "dropshadow";
-            echo 'filter: drop-shadow(10px 10px 3px rgba(32, 32, 32, 0.6)));';
+                echo 'filter: drop-shadow(10px 10px 3px rgba(32, 32, 32, 0.6));';
+                break;
 
             case "boxshadow":
                 echo 'box-shadow: 40px 40px 80px 1px #202020;';

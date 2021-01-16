@@ -2,18 +2,6 @@
 
 session_start();    
 
-if(isset($_SESSION['logged'])) {
-
-    //  echo "user is logged";
-
-}
-
-else {
-
-    echo "user is not logged";
-    
-}
-
 ?>
 
 <div class="image">
@@ -60,7 +48,7 @@ else {
 
                 <a href="#"><img src="media/dots.png" id="dots" alt="Menu" onclick="menuShow(show)"></a>
 
-                <div class="dotsContent">
+                <div class="dotsContent paperBackground bordersnotop">
 
                     <ul>
 

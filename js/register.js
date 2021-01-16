@@ -15,15 +15,14 @@ function validateRegister() {
 
     if (!checkAll()) {
 
-        alert("Please fill out the form entirely."); //Make this into a red paragraph when I have time 
+        document.getElementById("error").innerHTML = "Credentials taken or confirm values are not the same";
+        return false; //stay here until its good
         
     }
 
     else {
 
-        alert("You've registered successfully! You'll be redirected to the home screen."); //This too
-        //createUser(); to be continued with PHP
-        window.location.replace("index.php");
+        return true; //go to register.php
 
     }
 

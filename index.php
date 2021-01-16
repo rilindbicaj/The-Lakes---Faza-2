@@ -19,14 +19,14 @@
 
         if($content === 'profile') {
 
-            if (isset($_SESSION['username'])) echo 'media/userprofiles/'.$_SESSION['username'].'.jpg';
+            if (isset($_SESSION['Username'])) echo 'media/userprofiles/'.$_SESSION['Username'].'.jpg';
             else echo 'media/unknownprofile.gif';
 
         }
 
         else if ($content === 'user') {
 
-            if (isset($_SESSION['username'])) echo $_SESSION['username'];
+            if (isset($_SESSION['Username'])) echo $_SESSION['Username'];
             else echo 'user';
 
         }
@@ -37,11 +37,11 @@
 
         <div class="loginLogo">
 
-            <a href="Login.php">log in</a>
+            <?php if(!isset($_SESSION['logged'])) echo '<a href="Login.php">log in</a>'?>
 
             <img src="media/LogoWNAME.png" id="logoText" alt="Website logo">
 
-            <a href="register.php">no account? sign up</a>
+            <?php if(!isset($_SESSION['logged'])) echo '<a href="register.php">no account? sign up</a>'?>
 
         </div>
 
@@ -73,11 +73,11 @@
 
                     <div class="slideTitle">
 
-                        <img src="media/artist separator.png" alt="">
+                        <img src="media/artist separator.png" class="look" alt="">
 
                         <span>general news</span>
 
-                        <img src="media/artist separator.png" alt="">
+                        <img src="media/artist separator.png" class="look" alt="">
 
 
                     </div>

@@ -2,7 +2,7 @@
 
 $serverName = "DESKTOP-CQDRORL";
 
-$connectionInfo = array( "Database"=>"TheLakes");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$connectionInfo = array("Database"=>"TheLakes");
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
 ?>

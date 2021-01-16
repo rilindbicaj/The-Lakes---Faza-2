@@ -13,15 +13,52 @@
 
 <body>
 
-    <?php include 'components/header.php' ?>
+    <?php
+
+    include 'components/header.php';
+
+    function echoUsers() {
+  
+    $conn = sqlsrv_connect("DESKTOP-CQDRORL", array("Database"=>"TheLakes"));
+
+        if(isset($_SESSION['isModerator'])) {
+    
+            if($_SESSION['isModerator'] === 1) {
+    
+                $query = sqlsrv_query($conn, "SELECT * FROM Users");
+    
+                if(!$query)  die(print_r(sqlsrv_errors(),true));
+                
+                else {
+
+                    echo '<h2>registered users</h2>';
+                    echo ' <div class="column bordersall">';
+                
+                    while($row = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC)) {
+    
+                    echo '<div class="rowFlex">';
+                    echo '<img class="bordersall" src="media/userprofiles/'.$row['Username'].'.jpg" alt="profilePic">';
+                    echo '<img class="look" src="media/artist separator.png" alt="separator">'; //look based on theme (invert or otherwise)
+                    echo '<span>'.$row['Username'].'</span>';
+                    echo '<span> | </span>';
+                    echo $row['UserPassword'];
+                    echo '</div>';
+
+                    }
+
+                    }
+                     
+                    
+    
+                }
+    
+            }
+    
+        } 
+
+    ?>
 
     <div class="mainContainer paperBackground bordersall">
-
-        <?php 
-        
-        
-        
-        ?>
 
         <div class="column">
 
@@ -51,32 +88,9 @@
 
             </div>
 
-            <h2>registered users</h2>
-
-            <div class="column bordersall">
-
-                <div class="rowFlex">
-                    <img class="bordersall" src="media/unknownprofile.gif" alt="profilePic">
-                    <img src="media/artist separator.png" alt="separator">
-                    <span> Rilind Bicaj</span>
-                    <span> | </span>
-                    <span> 1171181190 </span>
-                </div>
-                <div class="rowFlex">
-                    <img class="bordersall" src="media/unknownprofile.gif" alt="profilePic">
-                    <img src="media/artist separator.png" alt="separator">
-                    <span> Rilind Bicaj</span>
-                    <span> | </span>
-                    <span> 1171181190 </span>
-                </div>
-                <div class="rowFlex">
-                    <img class="bordersall" src="media/unknownprofile.gif" alt="profilePic">
-                    <img src="media/artist separator.png" alt="separator">
-                    <span> Rilind Bicaj</span>
-                    <span> | </span>
-                    <span> 1171181190 </span>
-                </div>  
-                </div>
+                <?php echoUsers(); ?>
+               
+            </div>
 
             </div>
 

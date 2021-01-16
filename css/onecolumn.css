@@ -1,11 +1,3 @@
-<?php
-
-Header ("Content-type: text/css; charset=utf-8");
-
-require '../phpscripts/functions.php';
-
-?>
-
 /* GENERAL */
 
 main {
@@ -39,20 +31,6 @@ main {
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-}
-
-.rowFlex {
-
-    left: 0;
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -132,7 +110,7 @@ main {
 
 .columnContent:hover {
 
-    <?php theme($theme, 'dropshadow');?>
+    filter: drop-shadow(10px 10px 3px rgba(179, 179, 179, 0.432));
 
 }
 
@@ -145,9 +123,8 @@ main {
 .columnContent p {
 
     font-size: 0.6em;
-    text-align: center;
+    text-align: justify;
     font-weight: 600;
-    height: auto;
 
 }
 
@@ -156,7 +133,6 @@ main {
     width: 30%;
     height: auto;
     margin: 30px;
-    <?php theme($theme, 'icons'); ?>
 
 }
 
@@ -193,7 +169,7 @@ iframe {
 
     padding: 15px;
     text-align: justify;
-    height: auto;
+    height: 100%;
     width: 50%;
     font-size: 0.7em;
 
@@ -208,7 +184,7 @@ iframe {
 
 .columnContentRow:hover {
 
-    <?php theme($theme, 'dropshadow');?>
+    filter: drop-shadow(10px 10px 3px rgba(179, 179, 179, 0.432));
 
 }
 
@@ -237,6 +213,7 @@ iframe {
         height: auto;
         left: 0;
         padding: 5%;
+        background-color: red;
 
     }
 

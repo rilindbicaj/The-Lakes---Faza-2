@@ -9,21 +9,22 @@
         $username = $_POST['UsernameField'];
         $password = $_POST['PasswordField'];
     
-        $st = "SELECT UserID, username, isModerator, theme FROM Users WHERE username = '".$username."' AND userpassword = '".$password."'";
+        $st = "SELECT * FROM Users WHERE (username = '".$username."' OR email = '".$username."') AND userpassword = '".$password."'";
         $query = sqlsrv_query($conn, $st);
         $user = sqlsrv_fetch_array($query);
 
         if($user) {
 
             $_SESSION['UserID'] = $user['UserID'];
-            $_SESSION['username'] = $user['username'];
+            $_SESSION['Username'] = $user['Username'];
+            $_SESSION['email'] = $user['email'];
             $_SESSION['isModerator'] = $user['isModerator'];
             $_SESSION['theme'] = $user['theme'];
             $_SESSION['logged'] = 1;
 
             header("location: ../index.php");
 
-               }
+          }
 
         else {
             

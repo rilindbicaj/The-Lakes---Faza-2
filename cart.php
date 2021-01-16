@@ -19,7 +19,7 @@
             <div class="column">
 
                 <h2>your cart is empty. <a href="store.php">buy something first</a></h2>
-                <img class="notFound" src="media/artist separator.png" alt="">
+                <img class="notFound look" src="media/artist separator.png" alt="">
 
                 <!-- <div class="columnContentRow  bordersall">
 

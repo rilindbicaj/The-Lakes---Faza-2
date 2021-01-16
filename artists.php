@@ -24,7 +24,7 @@
                 <div class="columnContentRow">
 
                     <img class="artistImage bordersall" src="media/artist1.jpg" alt="Artist 1">
-                    <img class="artistSeparator" src="media/artist separator.png" alt="separator">
+                    <img class="artistSeparator look" src="media/artist separator.png" alt="separator">
                     <p class="artistText">Lee Luli (이루리) is a singer-songwriter from South Korea who performs internationally under the name Luli Lee (previously Lulileela). She is also the bassist in Bye Bye Badman, Seoulmoon, and LEEXLEE.</p>
     
                 </div>
@@ -76,6 +76,7 @@
                     <p class="artistText">Natalie Laura Mering, known professionally as Weyes Blood, is an American singer, songwriter, and musician. She was primarily raised in Doylestown, Pennsylvania. She has been performing her own material under variations of the name Weyes Blood since 2003.</p>
     
                 </div>
+                
                 <div class="columnContentRow">
     
                     <img class="artistImage bordersall" src="media/artist8.jpg" alt="Artist 8">
