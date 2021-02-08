@@ -1,6 +1,12 @@
 <?php 
 
-    require 'connect.php';
+require 'LoginRegister/User.php'    
+require 'LoginRegister/Login.php'    
+
+
+/* IN CASE I NEED this
+
+require 'connect.php';
 
     session_start();
 
@@ -34,5 +40,6 @@
 
         }
 
+*/
 
 ?>

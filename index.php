@@ -97,7 +97,7 @@
 
                 </div>
 
-                <p id="slideshowText"> New release from Grimes - "Visions" out February 2021 </p>
+                <p id="slideshowText"> Looking back - "Visions" by Grimes, released February 2012 </p>
 
             </div>
 

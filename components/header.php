@@ -1,6 +1,13 @@
 <?php require 'phpscripts/connect.php';
 
-session_start();    
+session_start();
+
+function generateLogin() {
+    //echo log in or log out based on session
+    if(!isset($_SESSION['logged'])) echo "<li><a href='login.php'>log in</a></li>";   
+    else echo "<li><a href='phpscripts/logout.php'>log out</a></li>"; 
+
+}
 
 ?>
 
@@ -24,13 +31,8 @@ session_start();
             <li><a href="videos.php">videos</a></li>
             <li><a href="news.php">news</a></li>
             <li><a href="store.php">store</a></li>
-            <li><a href="releases.php">latest releases</a></li>
-
-            
-            <?php //echo log in or log out based on session
-                 if(!isset($_SESSION['logged'])) echo "<li><a href='login.php'>log in</a></li>";   
-                 else echo "<li><a href='phpscripts/logout.php'>log out</a></li>"; 
-             ?>
+            <li><a href="releases.php">latest releases</a></li> 
+            <?php generateLogin(); ?>
 
         </ul>
 
@@ -59,11 +61,7 @@ session_start();
                         <li><a href="news.php">news</a></li>
                         <li><a href="store.php">store</a></li>
                         <li><a href="releases.php">latest releases</a></li>
-
-                        <?php //echo log in or log out based on session
-                 if(!isset($_SESSION['logged'])) echo "<li><a href='login.php'>log in</a></li>";   
-                 else echo "<li><a href='phpscripts/logout.php'>log out</a></li>"; 
-             ?>
+                        <?php generateLogin(); ?>
 
                     </ul>
 

@@ -19,11 +19,13 @@ function ajaxLogin() {
 
     http.onreadystatechange = function () {
         if (http.readyState == 4 && http.status == 200) {
+            
             if(http.responseText == "true") form.submit(); //if response from server is "true" submit form forcefully
 
             else {
 
                 document.getElementById("error").innerHTML = http.responseText; //else display error and return false - prevent from submitting
+                setTimeout(function() { document.getElementById("error").innerHTML = " "}, 2000);
                 return false;
 
             }

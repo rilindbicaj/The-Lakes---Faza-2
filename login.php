@@ -18,7 +18,7 @@
 
     <div class="mainContent">
 
-        <form id="loginform" class="login paperBackground" action="phpscripts/login.php" method="POST" onsubmit="return validateLogin()">
+        <form id="loginform" class="login paperBackground" action="phpscripts/loginform.php" method="POST" onsubmit="return validateLogin()">
 
             <ul>
 
