@@ -3,6 +3,8 @@
 require '../phpscripts/connect.php';
 session_start();
 
+echo phpinfo();
+
 //Dynamic stylesheet used for light and dark themes
 //Uses data from database initially then gets them from the session so it's easier to access
 

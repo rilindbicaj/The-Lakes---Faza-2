@@ -17,7 +17,7 @@ if(isset($_SESSION['theme'])) {
 
 function theme($theme, $selector) {
 
-    if($theme === 0) { //Dark
+    if($theme == 0) { //Dark
 
         switch($selector) {
 
@@ -55,7 +55,7 @@ function theme($theme, $selector) {
 
     }
 
-    else if ($theme === 1) {
+    else if ($theme == 1) {
 
         switch($selector) {
 

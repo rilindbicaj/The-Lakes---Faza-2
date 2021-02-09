@@ -66,6 +66,35 @@ button {
 
 }
 
+.message {
+
+    position: fixed;
+    width: 100%;
+    background-color: #badc58;
+    max-height: 0px;
+    color: #202020;
+    text-align: center;
+    transition: max-height 0.2s  linear;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 400;
+    z-index: 5;
+
+}
+
+.message p {
+
+    margin: 25px 0px 25px 0px;
+
+}
+
+.message.show {
+
+    max-height: 100px;
+    transition: max-height 0.2s linear;
+
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
     .columnContent {

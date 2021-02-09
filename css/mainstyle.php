@@ -5,7 +5,6 @@
 
 Header ("Content-type: text/css; charset=utf-8");
 
-require '../phpscripts/connect.php';
 require '../phpscripts/functions.php';
 
 ?>

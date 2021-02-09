@@ -15,7 +15,15 @@
 
 <body>
 
+    <div class="message"> 
+        
+    <p>ADDED TO CART!</p>
+
+    </div>
+
     <?php include 'components/header.php' ?>
+
+    
 
     <div class="mainContainer paperBackground bordersall">
 
@@ -23,12 +31,12 @@
 
         <div class="rowFlex">
 
-            <div class="columnContent">
+            <div id="1" class="columnContent">
 
                 <img class="bordersall" src="media/merch1.png" alt="merchdisplay">
                 <h2>Miss Anthropocene version 1</h2>
                 <p>$20.99</p>
-                <button>ADD TO CART</button>
+                <button onclick='addToCart()'>ADD TO CART</button>
 
             </div>
 
@@ -153,6 +161,8 @@
     </main>
 
     <?php include 'components/footer.php' ?>
+    <script src="js/store.js"></script>
+
 
 </body>
 

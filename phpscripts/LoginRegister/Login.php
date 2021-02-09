@@ -6,9 +6,8 @@ class Login {
     
     public function __construct() {
 
-        $servername = "DESKTOP-CQDRORL";
-        $array = array("Database"=>"TheLakes");
-        $this->connection = sqlsrv_connect($servername, $array);
+        $this->connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes");
+        $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     }
 
@@ -32,7 +31,8 @@ class Login {
         $_SESSION['Username'] = $user->getUsername();
         $_SESSION['Email'] = $user->getEmail();
         $_SESSION['ID'] = $user->getID();
-        $_SESSION['role'] = $user->getRole();  
+        $_SESSION['role'] = $user->getRole(); 
+        $_SESSION['theme'] = $user->getTheme();
         $_SESSION['logged'] = 1;
 
     }
@@ -40,9 +40,7 @@ class Login {
     public function queryUser($array) { //Execute query from $_POST and see if the user exists 
 
         $SQLStatement = "SELECT * FROM Users WHERE (username = '".$array['UsernameField']."' OR email = '".$array['UsernameField']."') AND userpassword = '".$array['PasswordField']."'";
-        $Query = sqlsrv_query($this->getConnection(), $SQLStatement);
-        //sqlsrv_query cannot return false if the query is correctly written (which it is, tested and all), so we won't check for that 
-        return $user = sqlsrv_fetch_array($Query);        
+        return $this->connection->query($SQLStatement)->fetch(PDO::FETCH_ASSOC);
 
     }
 
@@ -54,7 +52,7 @@ class Login {
 
                 $user = $this->queryUser($array);
 
-                if($user) { //If query suceends
+                if($user != null) { //If query suceends
 
                 $this->createUser($user); //Create user, set session, set cookie
                 header('location: ../index.php'); //Go back to homepage

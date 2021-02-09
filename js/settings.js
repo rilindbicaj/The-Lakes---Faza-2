@@ -13,8 +13,8 @@ console.log(theme.selectedIndex);
 
 theme.addEventListener("change", function() {
 
-    switch(theme.selectedIndex) {
-        case 0 :
+    switch(theme.options[theme.selectedIndex].text) {
+        case "Dark" :
             changecss(".paperBackground","background-image","url(../media/transpaper.png)");
             changecss(".bordersall, .bordersnotop, .bordersnobottom","border","solid 5px #b3b3b36e;");
             changecss("*","color","#989494;");
@@ -22,7 +22,7 @@ theme.addEventListener("change", function() {
             changecss(".look","filter","none");
             console.log("let there be dark");
             break;
-        case 1 :
+        case "Light" :
             changecss(".paperBackground","background-image","url(../media/transpaperLightMode.png)");
             changecss(".bordersall, .bordersnotop, .bordersnobottom","border","solid 5px #202020;");
             changecss("*","color","#202020;");

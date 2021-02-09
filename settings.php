@@ -21,9 +21,9 @@
   
     $conn = sqlsrv_connect("DESKTOP-CQDRORL", array("Database"=>"TheLakes"));
 
-        if(isset($_SESSION['isModerator'])) {
+        if(isset($_SESSION['role'])) {
     
-            if($_SESSION['isModerator'] === 1) {
+            if($_SESSION['role'] === 1) {
     
                 $query = sqlsrv_query($conn, "SELECT * FROM Users");
     
@@ -44,7 +44,7 @@
                     echo $row['UserPassword'];
                     echo '</div>';
 
-                    }
+                         }
 
                     }
                      
@@ -68,8 +68,28 @@
 
                 <label for="theme">Theme : </label>
                 <select name="theme" id="theme">
-                    <option value="Dark">Dark</option>
-                    <option value="Light">Light</option>
+
+                <?php
+                
+                $theme = 0;
+                if(isset($_SESSION['theme'])) $theme = $_SESSION['theme'];
+
+                if($theme == 0) {
+
+                    echo "<option value='Dark'>Dark</option>";
+                    echo "<option value='Light'>Light</option>";
+
+                }
+
+                else {
+
+                    echo "<option value='Light'>Light</option>";
+                    echo "<option value='Dark'>Dark</option>";
+
+                }
+                
+                ?>
+                    
                 </select>
 
             </div>
@@ -77,7 +97,7 @@
             <div class="rowFlex">
 
                 <label for="displayName">Display name : </label>
-                <span id="displayName">Rilind Bicaj</span>
+                <span id="displayName"><?php echo $_SESSION['Username'];?></span>
 
             </div>
 
