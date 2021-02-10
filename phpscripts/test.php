@@ -1,6 +1,6 @@
 <?php 
 
-require '../phpscripts/connect.php';
+
 session_start();
 
 echo phpinfo();

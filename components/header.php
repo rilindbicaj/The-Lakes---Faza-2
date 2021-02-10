@@ -1,4 +1,4 @@
-<?php require 'phpscripts/connect.php';
+<?php 
 
 session_start();
 
