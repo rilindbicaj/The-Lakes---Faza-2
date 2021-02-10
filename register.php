@@ -19,7 +19,7 @@
 
             <div class="mainContent">
 
-                <form class="login register paperBackground" action="phpscripts/register.php" method="POST" onsubmit="return validateRegister()">
+                <form id="registerform" class="login register paperBackground" action="phpscripts/registerform.php" method="POST" onsubmit="return validateRegister()">
 
                 <ul>
 
@@ -35,6 +35,7 @@
                     <li><input type="text" value="" name="EmailField"></li>
                     <li><input type="submit" name="Register" value="SUBMIT" class="button"></li>
                     <li><a href="login.php">already registered? log in instead</a></li>
+                    <p id="message"></p>
 
                 </ul>
 

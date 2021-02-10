@@ -6,7 +6,7 @@ class Login {
     
     public function __construct() {
 
-        $this->connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes");
+        $this->connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes", "vesa", "polo123456789");
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     }

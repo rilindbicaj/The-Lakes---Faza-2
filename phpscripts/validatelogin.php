@@ -14,17 +14,9 @@
         $_POST['PasswordField'] = $_POST['password'];
         $user = $login->queryUser($_POST);
 
-        if ($user == false || $user == null) {
-            
-            echo "User does not exist";
-        
-        }
+        if ($user == false || $user == null) echo "User does not exist";
 
-        else { 
-            
-            echo 'true';
-
-        }
+        else  echo 'true';
     
         
 ?>

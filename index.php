@@ -15,6 +15,8 @@
     
     include 'components/header.php';
     
+    echo $_SESSION['Username'];
+
     function indexContent($content) {
 
         if($content === 'profile') {

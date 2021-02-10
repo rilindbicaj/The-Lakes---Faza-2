@@ -1,5 +1,9 @@
 <?php
 
-$connection = new PDOCon
+require 'Cart.php';
+
+$cart = new Cart();
+
+$cart->productInCart();
 
 ?>

@@ -8,22 +8,14 @@ class Cart {
 
     public function __construct() {
 
-        $this->connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes");
+        $this->connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes", "vesa", "polo123456789");
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    }
-
-    public function getConnection() {
-
-        return $this->connection;
 
     }
 
     public function productInCart($productID) {
 
-        $query =  $this->connection->prepare("SELECT * FROM Cart WHERE UserID = ? AND ProductID = ?");
-        $query->bindParams();
-        $array = $query->execute(array($_SESSION['ID'], $productID))->fetchAll(PDO::FETCH_ASSOC);
+        $array =  $this->connection->query("SELECT * FROM Cart WHERE UserID='".$_SESSION['UserID']."' AND ProductID ='".$productID."'");
 
         if(isset($array['UserID'])) echo 'true';
         else echo 'false';
@@ -31,10 +23,5 @@ class Cart {
     }
 
 }
-
-$cart = new Cart();
-echo $_SESSION['ID'];
-$d = 1;
-$cart->productInCart($d);
 
 ?>
