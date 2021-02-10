@@ -18,44 +18,23 @@
 
             <div class="column">
 
-                    <h1>latest releases on Spotify</h1>
+                   
+                        <?php
+                            echo "<h1>latest releases on Spotify</h1>";
+                            require 'phpscripts/Data/releases.php';
 
-                    <div class="columnContent">
+                            $Releases1=new LatestReleases(5);
+                            echo "<img class='separator' src='".$this->VideoPhoto."'>'";
+                            $Releases2=new LatestReleases(6);
+                            echo "<img class='separator' src='".$this->VideoPhoto."'>'";
+                            $Releases3=new LatestReleases(7);
 
-                        <h3>Grimes - Delicate Weapon (Cyberpunk 2077 Radio 2 OST)</h3>
-                        <iframe class="bordersall" src="https://open.spotify.com/embed/track/1hT3eaGzrcFriQtgGdvsZv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            ?>
 
-                    </div>
-
-                    <img class="separator" src="media/artist separator.png" alt="">
-
-                    <div class="columnContent">
-
-                        <h3>Aseul - Slow Dance</h3>
-                        <iframe class="bordersall" src="https://open.spotify.com/embed/album/785adWJo2uSCmUXhqQcGIa" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-
-                    </div>
-
-                    <img class="separator" src="media/artist separator.png" alt="">
-
-                    <div class="columnContent">
-
-                        <h3>soccer mommy - gray light demo (from Selected Demos)</h3>
-                        <iframe class="bordersall" src="https://open.spotify.com/embed/track/13ne4BE7iZ9RHDe7cpxe82" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
 
 
-                    </div>
 
-                    <img class="separator" src="media/artist separator.png" alt="">
-
-                    <div class="columnContent">
-
-                        <h3>Luli Lee - Live in Sunset (from Let me dive into this moment EP)</h3>
-                        <iframe class="bordersall" src="https://open.spotify.com/embed/track/70cXtcSahvPBsnGZ4pj5m1" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-
-                    </div>
 
             </div>
 

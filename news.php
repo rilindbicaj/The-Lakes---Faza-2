@@ -22,7 +22,7 @@
 
         <?php
 
-        require 'Artists/news.php';
+        require 'phpscripts/Data/news.php';
 
         $News1=new News(1);
         $News2=new News(2);
