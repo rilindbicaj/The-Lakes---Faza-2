@@ -4,6 +4,6 @@ require 'Cart.php';
 
 $cart = new Cart();
 
-$cart->productInCart();
+echo $cart->productInCart($_POST['productID']);
 
 ?>

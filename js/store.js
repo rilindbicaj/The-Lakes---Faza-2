@@ -13,13 +13,13 @@ function addToCart() { //Adds product to cart if it doesn't already exist
         if(http.readyState == 4 && http.status == 200) {
 
             showMessage(http.responseText);
-            if(http.responseText = "true") add(productID);
+            if(http.responseText = "false") add(productID);
 
         }
 
     }
 
-    http.send("productID="+productID);
+    http.send("productID="+productID); //$_POST['productID']
 
 }
 
@@ -38,49 +38,21 @@ function add(productID) {
 
 }
 
-function ajaxLogin() {
-    
-    var http = new XMLHttpRequest();
-    var url = 'phpscripts/validatelogin.php'; //what script to execute
-    var params = 'username='+username.value+'&password='+password.value; //send parameters to server
-    http.open('POST', url, true);
-
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-    http.onreadystatechange = function () {
-        if (http.readyState == 4 && http.status == 200) {
-            
-            if(http.responseText == "true") form.submit(); //if response from server is "true" submit form forcefully
-
-            else {
-
-                document.getElementById("error").innerHTML = http.responseText; //else display error and return false - prevent from submitting
-                setTimeout(function() { document.getElementById("error").innerHTML = " "}, 2000);
-                return false;
-
-            }
-        }
-    }
-
-    http.send(params);
-
-}
-
 function showMessage(bool) {
 
     messageBox.classList.add("show");
 
-    if(bool == "true") {
+    if(bool == "false") {
 
         message.innerHTML = "ADDED TO CART!";
-        messageBox.style.backgroundColor = "#badc58";
+        messageBox.style.backgroundColor = "#badc58"; //ngjyra e gjelbert
 
     }
    
-    else if (bool == "false") {
+    else if (bool == "true") {
 
         message.innerHTML = "PRODUCT ALREADY IN CART!";
-        messageBox.style.backgroundColor = "#eb4d4b";
+        messageBox.style.backgroundColor = "#eb4d4b"; //red
 
     }
 

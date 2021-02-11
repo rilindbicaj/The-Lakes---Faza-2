@@ -23,8 +23,6 @@
 
     <?php include 'components/header.php' ?>
 
-    
-
     <div class="mainContainer paperBackground bordersall">
 
         <h1>Merch</h1>
