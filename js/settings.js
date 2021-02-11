@@ -1,9 +1,3 @@
-document.getElementById("displayPassword").addEventListener("click", function() {
-
-    document.getElementById("displayPassword").innerHTML = "1171181190";
-
-});
-
 let theme = document.getElementById("theme");
 let themeOptions = document.querySelectorAll("#theme option");
 console.log(theme.selectedIndex);
@@ -31,4 +25,64 @@ theme.addEventListener("change", function() {
             break;
     }
 
+    ajaxTheme();
+
 });
+
+function ajaxTheme() {
+
+    let indexTheme;
+
+    if(theme.options[theme.selectedIndex].text == "Dark") indexTheme = 0;
+    else indexTheme = 1;
+
+    let http = new XMLHttpRequest();
+    http.open("POST", "phpscripts/changeTheme.php", true);
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    http.onreadystatechange = function() {
+
+        if(http.readyState == 4 && http.status == 200) console.log(http.responseText);
+
+    }
+    
+    http.send("theme="+indexTheme);
+
+}
+
+/////////////////////////
+////Show users button////
+/////////////////////////
+
+let users = document.getElementById("users");
+
+function showUsersColumn() {
+
+    if(users.classList.contains("heightMax")) {
+
+        users.classList.remove("heightMax");
+        users.classList.remove("bordersall");
+
+    }
+
+    else {
+
+        users.classList.add("heightMax");
+        users.classList.add("bordersall");
+
+    }
+
+}
+
+///////////////////////////////
+////Profile picture upload////
+/////////////////////////////
+
+function upload() {
+
+    console.log("HELLO");
+
+    let http = new XMLHttpRequest();
+    http.open("POST", "phpscripts/")
+
+}

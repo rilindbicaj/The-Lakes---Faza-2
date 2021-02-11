@@ -14,7 +14,7 @@
 
 <body>
 
-    <?php include 'components/header.php' ?>
+    <?php require 'components/header.php' ?>
 
     <div class="mainContent">
 

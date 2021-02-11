@@ -13,7 +13,7 @@
 
     <?php
     
-    include 'components/header.php';
+    require 'components/header.php';
 
     function indexContent($content) {
 
@@ -106,7 +106,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
 
     <script type="text/javascript" src="js/index.js"></script>
 

@@ -195,7 +195,7 @@ iframe {
     text-align: justify;
     height: auto;
     width: 50%;
-    font-size: 0.7em;
+    font-size: 0.6em;
 
 
 }
@@ -224,6 +224,12 @@ iframe {
 
         width: 90%;
         left: 0;
+
+    }
+
+    .artistText {
+
+        font-size: 0.5em;
 
     }
 

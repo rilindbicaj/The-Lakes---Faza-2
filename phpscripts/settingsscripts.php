@@ -1,5 +1,0 @@
-<?php
-
-$script = $_REQUEST[]
-
-?>

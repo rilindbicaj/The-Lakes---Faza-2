@@ -25,8 +25,9 @@ class LatestReleases{
     public function echoLatestReleases(){
        echo "<div class='columnContent'>";
        echo "<h3>".$this->VideoName."</h3>";
-       echo "<iframe class='bordersall' src='".$this->VideoLink."'></iframe>";
+       echo "<iframe class='bordersall' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media' src='".$this->VideoLink."'></iframe>";
        echo "</div>";
+       echo "<img class='separator' src='media/artist separator.png'>";
     }
 
 }

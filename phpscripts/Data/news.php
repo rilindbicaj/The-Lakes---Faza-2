@@ -32,6 +32,7 @@ class News{
       echo " <img class='bordersall' src='".$this->NewsImg."' alt='columnContentpic'>";
       echo " <p>".$this->NewsDesc."</p>";
       echo "</div>";
+      echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>";
 
 
     }

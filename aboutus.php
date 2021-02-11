@@ -14,7 +14,7 @@
 
 <body>
 
-        <?php include 'components/header.php' ?>
+        <?php require 'components/header.php' ?>
 
         <div class="mainContent bordersall paperBackground">
 
@@ -32,7 +32,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
 
     <script src="js/aboutus.js"></script>
 

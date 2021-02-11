@@ -73,7 +73,7 @@ function checkUncheckSome(controller,theElements) {
 	//Programmed by Shawn Olson
 	//Copyright (c) 2006-2011
 	//Updated on April 2, 2011
-	//Permission to use this function provided that it always includes this credit text
+	//Permission to use this function provided that it always requires this credit text
 	//  http://www.shawnolson.net
 	//Find more JavaScripts at http://www.shawnolson.net/topics/Javascript/
 

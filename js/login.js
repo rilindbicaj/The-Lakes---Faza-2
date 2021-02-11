@@ -10,22 +10,22 @@ function prevent(event) {event.preventDefault();}
 
 function ajaxLogin() {
     
-    var http = new XMLHttpRequest();
+    var http = new XMLHttpRequest(); //Create XTMLHTTPRequest object - this will handle sending and receiving data from the server
     var url = 'phpscripts/validatelogin.php'; //what script to execute
-    var params = 'username='+username.value+'&password='+password.value; //send parameters to server
-    http.open('POST', url, true);    
+    var params = 'username='+username.value+'&password='+password.value; //send parameters to server in the form of $_POST
+    http.open('POST', url, true); 
 
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); // "im sending you some content pls accept"
 
     http.onreadystatechange = function () {
-        if (http.readyState == 4 && http.status == 200) {
+        if (http.readyState == 4 && http.status == 200) { //When the server responds, do something with its response
             
             if(http.responseText == "true") form.submit(); //if response from server is "true" submit form forcefully
 
             else {
 
                 document.getElementById("error").innerHTML = http.responseText; //else display error and return false - prevent from submitting
-                setTimeout(function() { document.getElementById("error").innerHTML = " "}, 2000);
+                setTimeout(function() { document.getElementById("error").innerHTML = " "}, 2000); //make error message disappear after 2 secs
                 return false;
 
             }

@@ -21,7 +21,7 @@
 
     </div>
 
-    <?php include 'components/header.php' ?>
+    <?php require 'components/header.php' ?>
 
     <div class="mainContainer paperBackground bordersall">
 
@@ -158,7 +158,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
     <script src="js/store.js"></script>
 
 

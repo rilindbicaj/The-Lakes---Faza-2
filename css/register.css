@@ -51,6 +51,13 @@ input {
 
 }
 
+.separator.small {
+
+    width: 20%;
+    height: auto;
+
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 
     .login {

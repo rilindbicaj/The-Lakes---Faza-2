@@ -12,7 +12,7 @@
 
 <body>
 
-<?php include 'components/header.php' ?>
+<?php require 'components/header.php' ?>
 
         <div class="mainContainer paperBackground bordersnotop">
 
@@ -40,7 +40,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/changecss.js"></script>
     <script src="js/settings.js"></script>

@@ -7,10 +7,12 @@ class User {
     private $email;
     private $role;
     private $theme;
+    private $password;
 
     public function __construct($array) { //Whether the array is set or not is checked in the Login class; $array in this case is an assoc array returned from a query
 
         $this->id = $array['UserID'];
+        $this->password = $array['UserPassword'];
         $this->username = $array['Username'];
         $this->email = $array['email'];
         $this->role = $array['isModerator'];
@@ -23,6 +25,12 @@ class User {
     public function getID() {
 
         return $this->id;
+
+    }
+
+    public function getPassword() {
+
+        return $this->password;
 
     }
 

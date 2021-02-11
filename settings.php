@@ -15,46 +15,8 @@
 
     <?php
 
-    include 'components/header.php';
-
-    function echoUsers() {
-  
-    $conn = sqlsrv_connect("DESKTOP-CQDRORL", array("Database"=>"TheLakes"));
-
-        if(isset($_SESSION['role'])) {
-    
-            if($_SESSION['role'] === 1) {
-    
-                $query = sqlsrv_query($conn, "SELECT * FROM Users");
-    
-                if(!$query)  die(print_r(sqlsrv_errors(),true));
-                
-                else {
-
-                    echo '<h2>registered users</h2>';
-                    echo ' <div class="column bordersall">';
-                
-                    while($row = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC)) {
-    
-                    echo '<div class="rowFlex">';
-                    echo '<img class="bordersall" src="media/userprofiles/'.$row['Username'].'.jpg" alt="profilePic">';
-                    echo '<img class="look" src="media/artist separator.png" alt="separator">'; //look based on theme (invert or otherwise)
-                    echo '<span>'.$row['Username'].'</span>';
-                    echo '<span> | </span>';
-                    echo $row['UserPassword'];
-                    echo '</div>';
-
-                         }
-
-                    }
-                     
-                    
-    
-                }
-    
-            }
-    
-        } 
+    require 'components/header.php';
+    require 'phpscripts/echoUsers.php';
 
     ?>
 
@@ -70,6 +32,8 @@
                 <select name="theme" id="theme">
 
                 <?php
+
+                //Switch indexes based on current theme - needed for JavaScipt to work properly
                 
                 $theme = 0;
                 if(isset($_SESSION['theme'])) $theme = $_SESSION['theme'];
@@ -89,7 +53,7 @@
                 }
                 
                 ?>
-                    
+
                 </select>
 
             </div>
@@ -97,20 +61,41 @@
             <div class="rowFlex">
 
                 <label for="displayName">Display name : </label>
-                <span id="displayName"><?php echo $_SESSION['Username'];?></span>
+                <span id="displayName"><?php if(isset($_SESSION['Username'])) echo $_SESSION['Username'];
+                                             else echo 'not logged in'?></span>
 
             </div>
 
             <div class="rowFlex">
 
                 <label for="displayPassword">Password : </label>
-                <span id="displayPassword">click to show</span>
+                <span id="displayPassword"><?php if(isset($_SESSION['Password'])) echo $_SESSION['Password'];
+                                             else echo 'not logged in'?></span>
 
             </div>
+
+            <div class="rowFlex">
+
+                <label for="displayPhoto">Profile picture : </label>
+
+                <?php 
+                
+                    if(isset($_SESSION['Username'])) echo '<img src="media/userprofiles/'.$_SESSION['Username'].'.jpg" id="profilePicture" class="bordersall" alt="">'; 
+                    else echo '<img src="media/unknownprofile.gif" class="bordersall" alt="" id="notLogged">';
+                
+                
+                ?>
+
+            </div>
+
+            <div class="rowFlex"></div>
+
+            <!-- Show select users button if the user is an admin -->
+            <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 1) echo "<button id='showUsers' onclick='showUsersColumn()'>SHOW ALL USERS</button>" ?>
+
+            <div id="users" class="column usersColumn">
 
                 <?php echoUsers(); ?>
-               
-            </div>
 
             </div>
 
@@ -118,9 +103,11 @@
 
     </div>
 
+    </div>
+
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php'?>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/changecss.js"></script>
     <script src="js/settings.js"></script>

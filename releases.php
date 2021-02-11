@@ -3,7 +3,7 @@
 <head>
 
     <title>latest releases</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="icon" href="media/SpotifyLogo.png">
     <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/onecolumn.php">
@@ -12,32 +12,26 @@
 
 <body>
 
-    <?php include 'components/header.php' ?>
+    <?php require 'components/header.php' ?>
 
-        <div class="mainContainer paperBackground bordersnotop">
+            <div class="mainContainer paperBackground bordersnotop">
 
-            <div class="column">
+                <div class="column">
 
-            <h1>latest releases on Spotify</h1>
+                    <h1>latest releases on Spotify</h1>
 
-                        <?php
-                          
-                            require 'phpscripts/Data/releases.php';
+                    <?php
+                                
+                        require 'phpscripts/Data/releases.php';
 
-                            $Releases1=new LatestReleases(5);
-                            echo "<img class='separator' src='media/artist separator.png'>";
-                            $Releases2=new LatestReleases(6);
-                            echo "<img class='separator' src='media/artist separator.png'>";
-                            $Releases3=new LatestReleases(7);
-                            echo "<img class='separator' src='media/artist separator.png'>";
-                            $released4 = new LatestReleases(8);
+                        $Releases1=new LatestReleases(5);
+                        $Releases2=new LatestReleases(6);
+                        $Releases3=new LatestReleases(7);
+                        $Releases4=new LatestReleases(8);
 
-                            ?>
+                    ?>
 
-                            </div>
-
-
-
+                </div>
 
             </div>
 
@@ -45,7 +39,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
 
 </body>
 

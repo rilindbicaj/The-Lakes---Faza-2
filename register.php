@@ -15,7 +15,7 @@
 
 <body>
 
-    <?php include 'components/header.php' ?>
+    <?php require 'components/header.php' ?>
 
             <div class="mainContent">
 
@@ -45,7 +45,7 @@
 
     </main>
 
-    <?php include 'components/footer.php' ?>
+    <?php require 'components/footer.php' ?>
     
     <script type="text/javascript" src="js/validate.js"></script>
     <script type="text/javascript" src="js/register.js"></script>

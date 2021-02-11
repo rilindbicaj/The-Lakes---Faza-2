@@ -26,3 +26,67 @@ select {
 
 }
 
+.usersColumn.column {
+
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 22s linear;
+    transition: border 1s linear;
+
+}
+
+.usersColumn.heightMax {
+
+    max-height: 10000px;
+    transition: max-height 22s linear;
+
+}
+
+#profilePicture {
+
+    width: 20%;
+    height: auto;
+    transition: transform 0.3s linear, box-shadow 0.2s linear;
+
+}
+
+#upload {
+
+    font-size: 10px;
+
+}
+
+#profilePicture:hover {
+
+    box-shadow: 1px 1px 30px 5px rgb(54, 57, 57);
+    transform: scale(1.2);
+    cursor: grab;
+
+}
+
+#showUsers {
+
+    font-size: 15px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+
+}
+
+#notLogged {
+
+    width: 20%;
+    height: auto;
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    #showUsers {
+
+        font-size: 10px;
+        width: 30%;
+
+    }
+
+}

@@ -30,7 +30,7 @@ class Artist {
 
         echo "<div class='columnContentRow'>";
         echo "<img class='artistImage bordersall' src='".$this->ImagePath."' alt=''>";
-        echo "<img class='artistSeparator' src='media/artist separator.png' alt='separator'>";
+        echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>";
         echo "<p class='artistText'>".$this->ArtistDescription."</p>";
         echo "</div>";
 

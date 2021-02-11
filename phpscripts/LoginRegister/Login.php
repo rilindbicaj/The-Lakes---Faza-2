@@ -29,6 +29,7 @@ class Login {
     public function setSession($user) {
 
         $_SESSION['Username'] = $user->getUsername();
+        $_SESSION['Password'] = $user->getPassword();
         $_SESSION['Email'] = $user->getEmail();
         $_SESSION['ID'] = $user->getID();
         $_SESSION['role'] = $user->getRole(); 
@@ -44,7 +45,7 @@ class Login {
 
     }
 
-    public function log_in($array) { //Array is POST
+    public function log_in($array) { //Array is POST, which I now realize is completely useless
 
         if(isset($array['UsernameField'])) { 
 
