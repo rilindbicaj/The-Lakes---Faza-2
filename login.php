@@ -29,7 +29,7 @@
                 <li>password</li>
                 <li><input type="password" name="PasswordField"></li>
                 <li><input type="submit" name="LogIn" value="LOG IN" class="button"></li>
-                <li><a href=" #">forgot password?</li>
+                <li><a href="#">forgot password?</li>
                 <li><a href="register.php">not registered?</a></li>
                 <li id="error"></li>
                 

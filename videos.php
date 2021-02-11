@@ -19,17 +19,19 @@
             <div class="column">
 
                 <h1>latest videos</h1>
+
                 <?php
-                require 'Data/videos.php';
+
+                    require 'phpscripts/Data/videos.php';
                 
-                 Video1=new Video(1);
-                 Video2=new Video(2);
-                 Video3=new Video(3);
-                 Video4=new Video(4);
-                 Video5=new Video(5);
+                    $Video1=new Video(1);
+                    $Video2=new Video(2);
+                    $Video3=new Video(3);
+                    $Video4=new Video(4);
+                    $Video5=new Video(5);
+                    
 
-
-                            ?>
+                ?>
              
 
             </div>

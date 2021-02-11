@@ -16,7 +16,7 @@
 
         if ($user == false || $user == null) echo "User does not exist";
 
-        else  echo 'true';
+        else echo 'true';
     
         
 ?>

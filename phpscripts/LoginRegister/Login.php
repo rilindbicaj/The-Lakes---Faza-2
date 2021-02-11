@@ -17,12 +17,12 @@ class Login {
 
     }
 
-    public function createUser($array) {
+    public function createUser($array) { //array assoc qe osht useri nga databaza 
 
         $user = new User($array);
 
         $this->setSession($user);
-        setCookie($user->getUsername(), $_COOKIE['Username'], 2*40*60*60);
+        setCookie($user->getUsername(), $_COOKIE['Username'], 2*40*60*60); //
 
     }
 

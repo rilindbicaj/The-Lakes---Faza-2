@@ -13,7 +13,7 @@ function ajaxLogin() {
     var http = new XMLHttpRequest();
     var url = 'phpscripts/validatelogin.php'; //what script to execute
     var params = 'username='+username.value+'&password='+password.value; //send parameters to server
-    http.open('POST', url, true);
+    http.open('POST', url, true);    
 
     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 

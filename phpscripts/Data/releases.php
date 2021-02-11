@@ -23,10 +23,9 @@ class LatestReleases{
 
     }
     public function echoLatestReleases(){
-       echo " <div class='columnContent'>";
+       echo "<div class='columnContent'>";
        echo "<h3>".$this->VideoName."</h3>";
-       echo "<iframe class='bordersall' src='".$this->VideoLink."'</iframe>'";
-      
+       echo "<iframe class='bordersall' src='".$this->VideoLink."'></iframe>";
        echo "</div>";
     }
 

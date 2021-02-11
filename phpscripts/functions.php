@@ -55,7 +55,7 @@ function theme($theme, $selector) {
 
     }
 
-    else if ($theme == 1) {
+    else if ($theme == 1) { //Light theme
 
         switch($selector) {
 
