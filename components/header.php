@@ -48,7 +48,7 @@ function generateLogin() {
 
             <li>
 
-                <a href="#"><img src="media/dots.png" id="dots" alt="Menu" onclick="menuShow(show)"></a>
+                <a href="#"><img src="media/dots.png" id="dots" alt="Menu" onclick="menuShow()"></a>
 
                 <div class="dotsContent paperBackground bordersnotop">
 

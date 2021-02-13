@@ -9,11 +9,11 @@ function echoUsers() {
 
     foreach($usersAll as $user) {
 
-        echo '<div class="rowFlex">';
+        echo '<div class="rowFlex">'; echo "\n";
 
-                    echo '<img src="media/userprofiles/'.$user['Username'].'.jpg" class="bordersall" alt="" style="width: 20%; height:auto">';
-                    echo '<img class="separator small" src="media/artist separator.png" alt="" style="width: 10%; height:auto">';
-                    echo '<p>'.$user['Username'].'</p>';
+                    echo '<img src="media/userprofiles/'.$user['Username'].'.jpg" class="bordersall" alt="" style="width: 20%; height:auto">'; echo "\n";
+                    echo '<img class="separator small look" src="media/artist separator.png" alt="" style="width: 10%; height:auto">'; echo "\n";
+                    echo '<p>'.$user['Username'].'</p>'; echo "\n";
 
         echo '</div>';
 

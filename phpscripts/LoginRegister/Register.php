@@ -20,7 +20,7 @@ class Register {
 
         $this->connection->query("INSERT INTO Users VALUES ('".$array['UsernameField']."','".$array['PasswordField']."',0,0,'".$array['EmailField']."')");
 
-        copy('C:/xampp/htdocs/The Lakes - Faza 2/media/placeholder.jpg', 'C:/xampp/htdocs/The Lakes - Faza 2/media/userprofiles/'.$array['UsernameField'].".jpg");
+        copy('../media/userprofiles/placeholder.jpg', '../media/userprofiles/'.$array['UsernameField'].".jpg");
 
         $this->login->log_in($array);
 

@@ -4,6 +4,17 @@ require 'Cart.php';
 
 $cart = new Cart();
 
-echo $cart->productInCart($_POST['productID']);
+if($cart->productInCart($_POST['productID']) == 1) {
+
+    echo 'true';
+
+}
+
+else {
+
+    $cart->add();
+    echo 'false';
+
+}
 
 ?>

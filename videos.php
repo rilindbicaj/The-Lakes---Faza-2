@@ -4,6 +4,7 @@
 
     <title>latest videos</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="icon" href="media/YoutubeLogo.png">
     <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/onecolumn.php">
     <link rel="icon" href="media/icovideo.png">

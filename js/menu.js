@@ -1,20 +1,16 @@
-var show = false;
-
 var menu = document.getElementsByClassName("dotsContent")[0];
 
-function menuShow(bool) {
+function menuShow() {
 
-    if(bool == false) { //Show menu
+    if(!menu.classList.contains("show")) { //Show menu
 
         menu.classList.add("show");
-        show = true;
 
     }
 
     else {
 
         menu.classList.remove("show");
-        show = false;
 
     }
 

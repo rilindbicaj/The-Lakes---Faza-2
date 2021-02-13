@@ -456,7 +456,9 @@ footer p {
     width: 150px;
     padding: 0px 5px 5px 5px;
     z-index: 200;
-    height: 0;
+    max-height: 0px;
+    transition: max-height 1s linear;
+    overflow: hidden;
     opacity: 0;
 
 }
@@ -486,7 +488,8 @@ footer p {
 
 .dotsContent.show  {
 
-    height: auto;
+    max-height: 200px;
+    transition: max-height 1s linear !important;
     opacity: 1;
 
 }

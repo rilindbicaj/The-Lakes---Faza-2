@@ -3,55 +3,77 @@
 <head>
 
     <title>your cart</title>
-    <link rel="icon" href="media/Logo1000px.png">
+    <link rel="icon" href="media/CartLogo.png">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/onecolumn.php">
+    <link rel="stylesheet" href="css/cart.css">
 
 </head>
 
 <body>
 
-        <?php require 'components/header.php' ?>
+<div id="message">
 
-        <div class="mainContainer paperBackground bordersall">
+        <p>REMOVED FROM CART!</p>
 
-            <div class="column">
+    </div>
 
-                <h2>your cart is empty. <a href="store.php">buy something first</a></h2>
-                <img class="notFound look" src="media/artist separator.png" alt="">
+    <?php 
+        
+            require 'components/header.php';
+            require 'phpscripts/Cart/Cart.php';
 
-                <!-- <div class="columnContentRow  bordersall">
+            $cart = new Cart();
+        
+        ?>
 
-                    <img class="artistImage" src="media/artist1.jpg" alt="">
-                    <img class="artistSeparator" src="media/artist separator.png" alt="">
-                    <h2>Grimes T-Shirt | 1 x 5.50$</h2>
+    
 
-                </div>
+    <div class="mainContainer paperBackground bordersall <?php if(isset($_SESSION['ID'])) echo 'hide'; ?>"> <!--  Hide if user is logged in -->
 
-                <div class="columnContentRow  bordersall">
+        <div class="column">
 
-                    <img class="artistImage" src="media/artist1.jpg" alt="">
-                    <img class="artistSeparator" src="media/artist separator.png" alt="">
-                    <h2>Grimes T-Shirt | 1 x 5.50$</h2>
+            <h2>you are not logged in</a></h2>
+            <img class="notFound look" src="media/artist separator.png" alt="">
 
-                </div>
-
-                <div class="columnContentRow  bordersall">
-
-                    <img class="artistImage" src="media/artist1.jpg" alt="">
-                    <img class="artistSeparator" src="media/artist separator.png" alt="">
-                    <h2>Grimes T-Shirt | 1 x 5.50$</h2>
-
-                </div> -->
-
-            </div>
 
         </div>
+
+    </div>
+
+    <div class="wrapper"></div>
+
+    <div class="mainContainer paperBackground bordersall <?php if(!isset($_SESSION['ID']) || !$cart->cartEmpty()) echo 'hide'; ?>"> <!--  Hide if user isnt logged or is logged but cart is empty -->
+
+        <div class="column">
+
+            <h2>your cart is empty. <a href="store.php">buy something first</a></h2>
+            <img class="notFound look" src="media/artist separator.png" alt="">
+
+
+        </div>
+
+    </div>
+
+    <div class="mainContainer paperBackground bordersall <?php if(!isset($_SESSION['ID']) || $cart->cartEmpty()) echo 'hide'; ?>"> <!--  Hide if cart is empty -->
+
+        <div class="column">
+
+            <?php
+            
+                $cart->getCart();
+
+            ?>
+
+        </div>
+
+    </div>
 
     </main>
 
     <?php require 'components/footer.php' ?>
+    <script src="js/cart.js"></script>
 
 </body>
 

@@ -27,12 +27,13 @@ class News{
 
     public function echoNews(){
 
-      echo "<div class='columnContent'>"; 
-      echo " <h3>".$this->NewsTitle."</h3>";
-      echo " <img class='bordersall' src='".$this->NewsImg."' alt='columnContentpic'>";
-      echo " <p>".$this->NewsDesc."</p>";
-      echo "</div>";
-      echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>";
+      echo "<div class='columnContent'>"; echo "\n";
+      echo " <h3>".$this->NewsTitle."</h3>";echo "\n";
+      echo " <img class='bordersall' src='".$this->NewsImg."' alt='columnContentpic'>";echo "\n";
+      echo " <p>".$this->NewsDesc."</p>";echo "\n";
+      echo "</div>";echo "\n";
+      echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>";echo "\n";
+      echo "\n";
 
 
     }

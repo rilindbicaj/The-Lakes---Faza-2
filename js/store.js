@@ -10,31 +10,15 @@ function addToCart() { //Adds product to cart if it doesn't already exist
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     request.onreadystatechange = function() {
 
-        if(http.readyState == 4 && http.status == 200) {
+        if(request.readyState == 4 && request.status == 200) {
 
-            showMessage(http.responseText);
-            if(http.responseText = "false") add(productID);
+            showMessage(request.responseText);
 
         }
 
     }
 
-    http.send("productID="+productID); //$_POST['productID']
-
-}
-
-function add(productID) {
-
-    let request = new XMLHttpRequest();
-    request.open("POST", "phpscripts/Cart/add.php", true);
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    request.onreadystatechange = function() {
-
-        if(http.readyState == 4 && http.status == 200) console.log("DONE");
-
-    }
-
-    request.send("productID="+productID);
+    request.send("productID="+productID); //$_POST['productID']
 
 }
 

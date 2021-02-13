@@ -1,0 +1,88 @@
+#message {
+
+    position: fixed;
+    width: 100%;
+    background-color: #badc58;
+    max-height: 0px;
+    color: #202020;
+    text-align: center;
+    transition: max-height 0.2s  linear;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 400;
+    z-index: 5;
+
+}
+
+#message.show {
+
+    max-height: 100px;
+    transition: max-height 0.2s linear;
+
+}
+
+#message p {
+
+    margin: 25px 0px 25px 0px;
+
+}
+
+.removeButton {
+
+    position: relative;
+    width: 5%;
+    height: 5%;
+    align-self: flex-start;
+    text-align: center;
+
+}
+
+.removeButton:hover {
+
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.removeButton:active {
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.mainContainer.bordersall.paperBackground.hide {
+
+    display: none;
+
+}
+
+.columnContentRow.bordersall.product.hide {
+
+    display: none;
+
+}
+
+.wrapper.hide {
+
+    display: none;
+
+}
+
+/* USED BY PRODUCT */
+
+.artistImage {
+
+    box-shadow: 1px 1px 30px 5px rgb(54, 57, 57);
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .columnContentRow.bordersall.product {
+
+        width: 90%;
+        font-size: 0.8em;
+
+    }
+
+}

@@ -11,6 +11,8 @@ if(isset($_SESSION['Username'])) {
 
     $_SESSION['theme'] = $_POST['theme']; //Because the theme is generated from the Session variable; otherwise it will stay like the time you logged in
 
+    unset($_POST['theme']);
+
     echo 'done';
 
 }

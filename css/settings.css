@@ -60,7 +60,7 @@ select {
 
     box-shadow: 1px 1px 30px 5px rgb(54, 57, 57);
     transform: scale(1.2);
-    cursor: grab;
+    cursor: pointer;
 
 }
 

@@ -28,11 +28,12 @@ class Artist {
 
     public function echoArtist() {
 
-        echo "<div class='columnContentRow'>";
-        echo "<img class='artistImage bordersall' src='".$this->ImagePath."' alt=''>";
-        echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>";
-        echo "<p class='artistText'>".$this->ArtistDescription."</p>";
-        echo "</div>";
+        echo "<div class='columnContentRow'>\n";
+        echo "<img class='artistImage bordersall' src='".$this->ImagePath."' alt='artistImage'>\n";
+        echo "<img class='artistSeparator separator' src='media/artist separator.png' alt='separator'>\n";
+        echo "<p class='artistText'>".$this->ArtistDescription."</p>\n";
+        echo "</div>\n";
+        echo "\n";
 
     }
 

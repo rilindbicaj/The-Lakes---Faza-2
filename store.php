@@ -5,7 +5,7 @@
 <head>
 
     <title> the store </title>
-    <link rel="icon" href="media/CartIcon.png">
+    <link rel="icon" href="media/CartLogo.png">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/onecolumn.php">
@@ -21,51 +21,27 @@
 
     </div>
 
-    <?php require 'components/header.php' ?>
+    <?php 
+    
+        require 'components/header.php';
+        require 'phpscripts/Cart/Product.php';
 
-    <div class="mainContainer paperBackground bordersall">
+    ?>
+
+     <div class="mainContainer paperBackground bordersall <?php if(!isset($_SESSION['Username'])) echo 'hidden';?>"> <!--Disable store if nobody is logged in -->
 
         <h1>Merch</h1>
 
         <div class="rowFlex">
 
-            <div id="1" class="columnContent">
-
-                <img class="bordersall" src="media/merch1.png" alt="merchdisplay">
-                <h2>Miss Anthropocene version 1</h2>
-                <p>$20.99</p>
-                <button onclick='addToCart()'>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch2.png" alt="merchdisplay">
-                <h2>Miss Anthropocene version 2</h2>
-                <p>$20.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch3.jpg" alt="merchdisplay">
-                <h2>Geidi Primes - Old version</h2>
-                <p>$39.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch4.jpg" alt="merchdisplay">
-                <h2>Soccer Mommy - Color Theory sticker pack</h2>
-                <p>$5.00</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-
+            <?php
+            
+            $product1 = new Product(1, "store");
+            $product2 = new Product(2, "store");
+            $product3 = new Product(3, "store");
+            $product4 = new Product(4, "store");
+            
+            ?>
 
         </div>
 
@@ -73,42 +49,14 @@
 
         <div class="rowFlex">
 
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch5.png" alt="merchdisplay">
-                <h2>Soccer Mommy - Color Theory vinyl</h2>
-                <p>$49.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch6.png" alt="">
-                <h2>Grimes - Visions vinyl</h2>
-                <p>$44.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch7.png" alt="">
-                <h2>Yeule - Serotonin II vinyl</h2>
-                <p>$29.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch8.jpg" alt="">
-                <h2>Let's Eat Grandma - I'm All Ears vinyl</h2>
-                <p>$29.99</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
+           <?php 
+           
+            $product5 = new Product(5, "store");
+            $product6 = new Product(6, "store");
+            $product7 = new Product(7, "store");
+            $product8 = new Product(8, "store");
+           
+           ?>
 
         </div>
 
@@ -116,43 +64,23 @@
 
         <div class="rowFlex">
 
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch9.jpg" alt="merchdisplay">
-                <h2>Visions poster</h2>
-                <p>$20.00</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch10.jpg" alt="merchdisplay">
-                <h2>Blond poster</h2>
-                <p>$20.00</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch11.jpg" alt="merchdisplay">
-                <h2>Visions alternative</h2>
-                <p>$15.00</p>
-                <button>ADD TO CART</button>
-
-            </div>
-
-            <div class="columnContent">
-
-                <img class="bordersall" src="media/merch12.jpg" alt="merchdisplay">
-                <h2>Little Earthquakes poster</h2>
-                <p>$20.00</p>
-                <button>ADD TO CART</button>
-
-            </div>
+        <?php 
+           
+           $product9 = new Product(9, "store");
+           $product10 = new Product(10, "store");
+           $product11 = new Product(11, "store");
+           $product12 = new Product(12, "store");
+          
+          ?>
 
         </div>
+
+    </div>
+
+    <div class="mainContainer mainContainer paperBackground bordersall <?php if(isset($_SESSION['Username'])) echo 'hidden';?>">
+    
+        <h3 id="notLogged">our store is not available to non-users</h3>
+        <img class="notFound look" src="media/artist separator.png" alt="">
 
     </div>
 

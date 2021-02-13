@@ -27,12 +27,13 @@ class Video {
 
     public function echoVideo() {
 
-        echo "<div class='columnContent'>";
-        echo "<h2>".$this->Title."</h2>";
-        echo "<iframe width='80%'height='400px' src='".$this->Link."'></iframe>";
-        echo "<p>".$this->VideoDesc."</p>";
-        echo "</div>";
-
+        echo "<div class='columnContent'>"; echo "\n";
+        echo "<h2>".$this->Title."</h2>"; echo "\n";
+        echo "<iframe width='80%'height='400px' src='".$this->Link."'></iframe>";echo "\n";
+        echo "<p>".$this->VideoDesc."</p>";echo "\n";
+        echo "</div>";echo "\n";
+        echo "\n";
+        
     }
 }
 

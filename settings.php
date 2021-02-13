@@ -3,7 +3,7 @@
 <head>
 
     <title>your cart</title>
-    <link rel="icon" href="media/Logo1000px.png">
+    <link rel="icon" href="media/SettingsLogo.png">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/mainstyle.php">
     <link rel="stylesheet" href="css/onecolumn.php">
@@ -108,7 +108,7 @@
     </main>
 
     <?php require 'components/footer.php'?>
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script> <!--needed for theme preview -->
     <script src="js/changecss.js"></script>
     <script src="js/settings.js"></script>
 

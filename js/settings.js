@@ -73,16 +73,3 @@ function showUsersColumn() {
     }
 
 }
-
-///////////////////////////////
-////Profile picture upload////
-/////////////////////////////
-
-function upload() {
-
-    console.log("HELLO");
-
-    let http = new XMLHttpRequest();
-    http.open("POST", "phpscripts/")
-
-}
