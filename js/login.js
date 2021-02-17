@@ -12,7 +12,7 @@ function ajaxLogin() {
     
     var http = new XMLHttpRequest(); //Create XTMLHTTPRequest object - this will handle sending and receiving data from the server
     var url = 'phpscripts/validatelogin.php'; //what script to execute
-    var params = 'username='+username.value+'&password='+password.value; //send parameters to server in the form of $_POST
+    var params = 'UsernameField='+username.value+'&PasswordField='+password.value; //send parameters to server in the form of $_POST
     http.open('POST', url, true); 
 
     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); // "im sending you some content pls accept"

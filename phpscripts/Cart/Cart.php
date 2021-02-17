@@ -23,7 +23,7 @@ class Cart {
 
     public function productInCart() {
 
-        $array =  $this->connection->query("SELECT * FROM Cart WHERE UserID=".$_SESSION['ID']." AND ProductID=".$_POST['productID'])->fetch(PDO::FETCH_ASSOC);
+        $array =  $this->connection->query("SELECT * FROM Cart WHERE UserID={$_SESSION['ID']} AND ProductID={$_POST['productID']}")->fetch(PDO::FETCH_ASSOC);
 
         if(isset($array['UserID'])) return 1;
         else return 0;
@@ -32,14 +32,14 @@ class Cart {
 
     public function add() { //Get usedID from session and productID from AJAX (through POST)
 
-        $this->connection->query("INSERT INTO CART VALUES (".$_SESSION['ID'].",".$_POST['productID'].")");
+        $this->connection->query("INSERT INTO CART VALUES ({$_SESSION['ID']},{$_POST['productID']})");
         unset($_POST['productID']);
 
     }
 
     public function remove() {
 
-        $this->connection->query("DELETE FROM CART WHERE UserID=".$_SESSION['ID']." AND ProductID=".$_POST['productID']);
+        $this->connection->query("DELETE FROM CART WHERE UserID={$_SESSION['ID']} AND ProductID={$_POST['productID']}");
         unset($_POST['productID']);
 
     }
@@ -61,7 +61,7 @@ class Cart {
 
         if(isset($_SESSION['ID'])) { 
 
-            $array = $this->connection->query("SELECT * FROM CART WHERE UserID = ".$_SESSION["ID"])->fetchAll(PDO::FETCH_ASSOC);
+            $array = $this->connection->query("SELECT * FROM CART WHERE UserID = {$_SESSION["ID"]}")->fetchAll(PDO::FETCH_ASSOC); //Returns array of arrays, so you have to loop through them
 
             foreach($array as $product) {
     

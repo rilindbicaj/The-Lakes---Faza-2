@@ -13,7 +13,7 @@ function ajaxRegister() {
     
     var http = new XMLHttpRequest();
     var url = 'phpscripts/validateregister.php'; //what script to execute
-    var params = 'username='+username.value+'&email='+email.value; //send parameters to server
+    var params = 'UsernameField='+username.value+'&EmailField='+email.value; //send parameters to server
     http.open('POST', url, true);
 
     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

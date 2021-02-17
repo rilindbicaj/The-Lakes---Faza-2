@@ -6,10 +6,6 @@
 
     $register = new Register();
 
-    $array['UsernameField'] = $_POST['UsernameField'];
-    $array['PasswordField'] = $_POST['PasswordField'];
-    $array['EmailField'] = $_POST['EmailField'];
-
-    $register->registerUser($array);
+    $register->registerUser();
 
 ?>

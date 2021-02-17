@@ -2,19 +2,10 @@
 
 session_start();
 
-if(isset($_SESSION['Username'])) {
+require "ConnectionsMisc.php";
 
-    $connection = new PDO("sqlsrv:Server=DESKTOP-CQDRORL;Database=TheLakes", "vesa", "polo123456789");
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new ConnectionsMisc();
 
-    $connection->query("UPDATE USERS SET theme=".$_POST['theme']." WHERE UserID=".$_SESSION['ID']);
-
-    $_SESSION['theme'] = $_POST['theme']; //Because the theme is generated from the Session variable; otherwise it will stay like the time you logged in
-
-    unset($_POST['theme']);
-
-    echo 'done';
-
-}
+$conn->changeTheme();
 
 ?>

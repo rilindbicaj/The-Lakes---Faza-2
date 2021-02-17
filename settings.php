@@ -16,7 +16,7 @@
     <?php
 
     require 'components/header.php';
-    require 'phpscripts/echoUsers.php';
+    require 'phpscripts/ConnectionsMisc.php';
 
     ?>
 
@@ -95,7 +95,13 @@
 
             <div id="users" class="column usersColumn">
 
-                <?php echoUsers(); ?>
+                <?php 
+                
+                    $conn = new ConnectionsMisc();
+
+                    $conn->echoUsers();
+                
+                ?>
 
             </div>
 

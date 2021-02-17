@@ -16,22 +16,21 @@ class Register {
 
     }
 
-    public function registerUser($array) {
+    public function registerUser() {
 
-        $this->connection->query("INSERT INTO Users VALUES ('".$array['UsernameField']."','".$array['PasswordField']."',0,0,'".$array['EmailField']."')");
+        $this->connection->query("INSERT INTO Users VALUES ('{$_POST['UsernameField']}','{$_POST['PasswordField']}',0,0,'{$_POST['EmailField']}')");
 
-        copy('../media/userprofiles/placeholder.jpg', '../media/userprofiles/'.$array['UsernameField'].".jpg");
+        copy("../media/userprofiles/placeholder.jpg", "../media/userprofiles/{$_POST['UsernameField']}.jpg");
 
-        $this->login->log_in($array);
+        $this->login->log_in();
 
     }
 
-    public function userExists($username, $email) {
+    public function userExists() {
 
-        $array = $this->connection->query("SELECT * FROM Users WHERE Username='".$username."' OR email='".$email."'")->fetch(PDO::FETCH_ASSOC);
+        $array = $this->connection->query("SELECT * FROM Users WHERE Username='{$_POST['UsernameField']}' OR email='{$_POST['EmailField']}'")->fetch(PDO::FETCH_ASSOC);
 
-        return isset($array['Username']);
-
+        return isset($array['Username']); //Returns 1 if true apparently, not "true"
     }
 
 }
