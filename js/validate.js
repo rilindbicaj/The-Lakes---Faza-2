@@ -50,7 +50,7 @@ function validateEmail(email, target) {
 
 function validateUser(user, target) {
 
-    if (user.length < 5 && user != "") {
+    if (user.length < 5 || user.trim() == "") {
 
         glow(false, target);
         return false;

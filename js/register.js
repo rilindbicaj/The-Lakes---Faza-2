@@ -1,4 +1,4 @@
-var inputList = document.getElementsByTagName("input"); //1,2,3,4 are Username, Pass, Conf, Email, 5 is SUBMIT
+var inputList = document.getElementsByTagName("input"); //0,1,2,3 are Username, Pass, Conf, Email, 4 is SUBMIT
 var message = document.getElementById("message");
 var username = document.getElementsByName("UsernameField")[0];
 var password = document.getElementsByName("PasswordField")[0];
@@ -37,7 +37,7 @@ function ajaxRegister() {
 
 }
 
-inputList[4].addEventListener("click", function (event) {
+inputList[4].addEventListener("click", function () {
 
     validateUser(inputList[0].value, inputList[0]);
     validatePassword(inputList[1].value, inputList[1]);
